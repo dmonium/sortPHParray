@@ -1,0 +1,58 @@
+{
+  "name": "php-array-sorter",
+  "displayName": "PHP Array Sorter",
+  "description": "Ordena las claves de un array de PHP",
+  "publisher": "Lord Dark Dmonium",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "keywords": ["php", "array", "sort", "utility"],
+  "categories": [
+    "Programming Languages",
+	"Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.sortPhpArray"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.sortPhpArray",
+        "title": "Ordenar Array PHP",
+		"category": "Ordenar Arreglos PHP"
+      }
+    ],
+	"keybindings": [
+        {
+            "command": "extension.sortPhpArray",
+            "key": "ctrl+shift+f10",
+            "when": "editorTextFocus"
+        }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.sortPhpArray",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "author": {
+    "name": "Lord Dark Dmonium",
+    "email": "dmonium@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/php-array-sorter.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0"
+  }
+}
